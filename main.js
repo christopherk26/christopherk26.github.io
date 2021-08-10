@@ -39,8 +39,8 @@ var canvas = document.querySelector("#c");
 var gl = canvas.getContext("webgl2");
  if (!gl) { console.log('error')}
  
-canvas.width = 800;
-canvas.height = 600;
+canvas.width = 1000;
+canvas.height = 700;
 
  function createShader(gl, type, source) {
   var shader = gl.createShader(type);
