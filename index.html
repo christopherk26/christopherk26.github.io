@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+      <head>
+        <title>3d Spinning "C"</title>
+        
+        <link rel="stylesheet" type="text/css" href="3d.css">
+      </head>
+      
+      <body>
+        <canvas id="c" ></canvas>
+<p>X, Y and Z position:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="800" value="400" class="slider" id="xSlider">
+
+  <input type="range" min="0" max="600" value="300" class="slider" id="ySlider">
+
+  <input type="range" min="-300" max="300" value="0" class="slider" id="zSlider">
+</div>
+<p>Rotation of X, Y and Z, in degrees:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="360" value="0" class="slider" id="XangleInDegsSlider">
+
+  <input type="range" min="0" max="360" value="0" class="slider" id="YangleInDegsSlider">
+
+  <input type="range" min="0" max="360" value="0" class="slider" id="ZangleInDegsSlider">
+</div>
+<p>X, Y and Z scale:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="500" value="100" class="slider" id="scaleX">
+
+  <input type="range" min="0" max="500" value="100" class="slider" id="scaleY">
+
+  <input type="range" min="0" max="500" value="100" class="slider" id="scaleZ">
+</div>
+
+<p>X, Y and Z spin:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="20" value="1" class="slider" id="XSpinSlider">
+
+  <input type="range" min="0" max="20" value="1" class="slider" id="YSpinSlider">
+
+  <input type="range" min="0" max="20" value="1" class="slider" id="ZSpinSlider">
+</div>
+
+<p>Depth:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="100" value="20" class="slider" id="depthSlider">
+</div>
+
+
+        <script src="main.js"></script>
+      </body>
+</html>
