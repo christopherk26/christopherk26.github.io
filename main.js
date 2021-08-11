@@ -172,10 +172,13 @@ rotation[2] = (ZrotationAngleInDegsSlider.value*3.14/180);
 
 
 refreshNonRotationalValues();
+refreshXRotationalValue();
+refreshYRotationalValue();
+refreshZRotationalValue();
 
 translationXSlider.oninput = function() {refreshNonRotationalValues(); drawScene()};
-translationYSlider.oninput = function () {refreshNonRotationalValues(); drawScene()};
-translationZSlider.oninput = function () {refreshNonRotationalValues(); drawScene()};
+translationYSlider.oninput = function() {refreshNonRotationalValues(); drawScene()};
+translationZSlider.oninput = function() {refreshNonRotationalValues(); drawScene()};
 XrotationAngleInDegsSlider.oninput = function() {refreshXRotationalValue(); drawScene()};
 YrotationAngleInDegsSlider.oninput = function() {refreshYRotationalValue(); drawScene()};
 ZrotationAngleInDegsSlider.oninput = function() {refreshZRotationalValue(); drawScene()};
@@ -421,7 +424,7 @@ var far = -1000;
   matrix = m4.zRotate(matrix, rotation[2]);
   matrix = m4.scale(matrix, scale[0], scale[1], scale[2]);
 
-    matrix = m4.multiply(matrix, moveOriginMatrix);
+  matrix = m4.multiply(matrix, moveOriginMatrix);
    
  
         // Set the matrix.
@@ -433,6 +436,16 @@ var far = -1000;
         var count = 14*6;
         // above - sides x 6 (two triangles, six points)
         gl.drawArrays(primitiveType, offset, count);
+        
+        
+         displayMatrixResultsAtTop();
+        function displayMatrixResultsAtTop(){
+  document.getElementById("row1").innerHTML = "[" + matrix[0] + ", "+ matrix[1] +", "+ matrix [2] + ", " + matrix[3]+"]";
+  document.getElementById("row2").innerHTML = "[" + matrix[4] + ", "+ matrix[5] +", "+ matrix [6] + ", " + matrix[7]+"]";
+  document.getElementById("row3").innerHTML = "[" + matrix[8] + ", "+ matrix[9] +", "+ matrix [10] + ", " + matrix[11]+"]";
+  document.getElementById("row4").innerHTML = "[" + matrix[12] + ", "+ matrix[13] +", "+ matrix [14] + ", " + matrix[15]+"]";
+}
+
       }
 
 
@@ -708,6 +721,4 @@ rotation[2] = rotation[2] + (ZSpin*3.14/180)*deltaTime*100;
 
 requestAnimationFrame(update);
 
-
-console.log("!!!");
 };
