@@ -1,0 +1,59 @@
+body{
+    background-color:#000000;
+    font-family: 'Press Start 2p';
+    font-size:7px;
+    text-align: center;
+    color:#ffffff;
+ }
+  
+ 
+
+
+ #mainCanvas{
+ border-color:;
+ border-radius: 1px;
+ border: 3px solid;
+ position: relative;
+ font-family: 'Press Start 2p';
+ bottom: -10px;
+  
+ 
+ }
+ 
+
+ #resetButton{
+   width: 140px;
+   height: 30px;
+   background-color:#000000;
+   border-color:#ffffff;
+   border-radius: 1px;
+   font-family: 'Press Start 2p';
+   font-size: 17px;
+   font-weight: 550;
+   border: 3px solid;
+   color:#ffffff;
+   box-shadow: 0px 0px #;
+}
+#resetButton:hover {
+border-color: #0000FF;
+color: #0000FF;
+}
+
+#startButton{
+   width: 140px;
+   height: 30px;
+   background-color:#000000;
+   border-color:#ffffff;
+   border-radius: 1px;
+   font-family: 'Press Start 2p';
+   font-size: 17px;
+   font-weight: 550;
+   border: 3px solid;
+   color:#ffffff;
+   box-shadow: 0px 0px #;
+}
+#startButton:hover {
+border-color: #0000FF;
+color: #0000FF;
+}
+  
